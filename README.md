@@ -12,3 +12,14 @@ Basic UDP implementation of Client and Server.
     3.3. Run this command on 2nd cmd: java -jar "fileName2".jar (i.e. if your file is called Server.jar: java -jar Server.jar).
   4. Send messages to server. type "bye" to exit.
 
+
+
+### Running App:
+Right after running the app.
+![](Pics/1.PNG) 
+
+### Sending some messages to Server:
+![](Pics/2.PNG) 
+
+### Listening Ports on "Resource monitor":
+![](Pics/3.PNG) 
