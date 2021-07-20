@@ -21,19 +21,17 @@ public class UDPClient {
 		InetAddress ip = InetAddress.getLocalHost();
 		byte buf[] = null;
 
-		// loop while user not enters "bye"
+		// loop while message is different from "bye"
 		while (true) {
 			String inp = sc.nextLine();
 
-			// convert the String input into the byte array.
+			// convert the String input into byte array.
 			buf = inp.getBytes();
 
-			// Step 2 : Create the datagramPacket for sending
-			// the data.
+			// Step 2 : Create the datagramPacket for sending the data.
 			DatagramPacket DpSend = new DatagramPacket(buf, buf.length, ip, 1234);
 
-			// Step 3 : invoke the send call to actually send
-			// the data.
+			// Step 3 : invoke the send call to actually send the data.
 			ds.send(DpSend);
 
 			// break the loop if user enters "bye"
