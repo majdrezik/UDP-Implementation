@@ -11,7 +11,7 @@ import java.net.SocketException;
 public class UDPServer {
 
 	public static void main(String[] args) throws IOException {
-		// Step 1 : Create a socket to listen at port 1234
+		// Step 1 : Create a socket to listen on port `1234`
 		System.out.println("Server is listening...\n");
 		DatagramSocket ds = new DatagramSocket(1234);
 		byte[] receive = new byte[65535];
@@ -22,7 +22,7 @@ public class UDPServer {
 			// Step 2 : create a DatgramPacket to receive the data.
 			DpReceive = new DatagramPacket(receive, receive.length);
 
-			// Step 3 : revieve the data in byte buffer.
+			// Step 3 : revieve the data into the `byte` buffer.
 			ds.receive(DpReceive);
 
 			System.out.println("Client:-" + data(receive));
@@ -38,8 +38,7 @@ public class UDPServer {
 		}
 	}
 
-	// A utility method to convert the byte array
-	// data into a string representation.
+	// converting the byte array data to a string.
 	public static StringBuilder data(byte[] a) {
 		if (a == null)
 			return null;
